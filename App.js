@@ -11,6 +11,7 @@ import {
   Image
 } from 'react-native';
 import Splash from './activities/Splash'
+import MainActivity from './activities/MainActvity';
 
 const App = () => {
 

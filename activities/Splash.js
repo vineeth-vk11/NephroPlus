@@ -19,6 +19,7 @@ import ProfileDetails from './ProfileDetails.js'
 import SelectAddress from './SelectAddress.js'
 import EligibilityCheck from './EligibilityCheck.js'
 import EligibilityResult from './EligibilityResult.js'
+import ServiceDetails from './ServiceDetails';
  const Splash=()=>{
    return(
     <View style={styles.main}>
@@ -32,7 +33,8 @@ import EligibilityResult from './EligibilityResult.js'
         {/* <SelectAddress/> */}
         {/* <EligibilityCheck/> */}
         {/* <EligibilityResult/> */}
-        <MobileInput/>
+        {/* <MobileInput/> */}
+        <ServiceDetails/>
     </View>
    );
  }
