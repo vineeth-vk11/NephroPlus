@@ -20,6 +20,9 @@ import SelectAddress from './SelectAddress.js'
 import EligibilityCheck from './EligibilityCheck.js'
 import EligibilityResult from './EligibilityResult.js'
 import ServiceDetails from './ServiceDetails';
+import SlotBooking from './SlotBooking';
+import Report from './Report';
+import CheckOut from './CheckOut';
  const Splash=()=>{
    return(
     <View style={styles.main}>
@@ -34,7 +37,10 @@ import ServiceDetails from './ServiceDetails';
         {/* <EligibilityCheck/> */}
         {/* <EligibilityResult/> */}
         {/* <MobileInput/> */}
-        <ServiceDetails/>
+        {/* <ServiceDetails/> */}
+        {/* <SlotBooking/> */}
+        {/* <Report/> */}
+        <CheckOut/>
     </View>
    );
  }

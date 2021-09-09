@@ -21,8 +21,10 @@
     "react-native-elements": "^3.4.2",
     "react-native-flexi-radio-button": "^0.2.2",
     "react-native-image-slider-box": "^1.1.8",
+    "react-native-modal-datetime-picker": "^11.0.0",
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-paper": "^4.9.2",
+    "react-native-paper-dates": "^0.4.6",
     "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {

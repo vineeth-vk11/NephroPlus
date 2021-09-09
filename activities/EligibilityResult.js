@@ -15,7 +15,7 @@
  
  const EligibilityResult=()=>{
    return(
-     <>
+     <View>
         <Text style={styles.text}>Eligibility Result</Text>
         <View style={styles.main}>
             <Image
@@ -29,7 +29,7 @@
           underlayColor='#fff'>
           <Text style={styles.label}>{result?"NEXT":"TAKE ELIGIBILITY CHECK AGAIN"}</Text>
         </TouchableOpacity>
-    </>
+    </View>
    );
  }
  const styles = StyleSheet.create({

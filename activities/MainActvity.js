@@ -3,8 +3,10 @@ import { BottomNavigation} from 'react-native-paper';
 import {Text, View,StyleSheet} from 'react-native';
 import HomePage from './Home';
 import ServiceDetails from './ServiceDetails';
+import OrderPlaced from './OrderPlaced';
 
-const Home = () => <HomePage/>;
+// const Home = () => <HomePage/>;
+const Home = () => <OrderPlaced/>;
 
 const Bookings = () => <Text style={{color:'red'}}>servise</Text>;
 
