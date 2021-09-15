@@ -23,6 +23,8 @@ import ServiceDetails from './ServiceDetails';
 import SlotBooking from './SlotBooking';
 import Report from './Report';
 import CheckOut from './CheckOut';
+import VerticalStepIndicator from './StepIndicator';
+import OrderTracking from './OrderTracking';
  const Splash=()=>{
    return(
     <View style={styles.main}>
@@ -40,7 +42,12 @@ import CheckOut from './CheckOut';
         {/* <ServiceDetails/> */}
         {/* <SlotBooking/> */}
         {/* <Report/> */}
-        <CheckOut/>
+        {/* <CheckOut/> */}
+        {/* <VerticalStepIndicator/> */}
+        {/* <OrderTracking/> */}
+        <ProfileDetails/>
+
+        
     </View>
    );
  }

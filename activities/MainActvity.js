@@ -4,13 +4,15 @@ import {Text, View,StyleSheet} from 'react-native';
 import HomePage from './Home';
 import ServiceDetails from './ServiceDetails';
 import OrderPlaced from './OrderPlaced';
+import Bookings from './Bookings';
+import Profile from './Profile';
 
 // const Home = () => <HomePage/>;
 const Home = () => <OrderPlaced/>;
 
-const Bookings = () => <Text style={{color:'red'}}>servise</Text>;
+const BookingsPage = () => <Bookings/>;
 
-const Profile = () => <Text style={{color:'red'}}>Recents</Text>;
+const ProfilePage = () => <Profile/>;
 
 const MainActivity = () => {
   const [index, setIndex] = useState(0);
@@ -22,8 +24,8 @@ const MainActivity = () => {
 
   const renderScene = BottomNavigation.SceneMap({
     home: Home,
-    bookings: Bookings,
-    profile: Profile,
+    bookings: BookingsPage,
+    profile: ProfilePage,
   });
 
   return (
