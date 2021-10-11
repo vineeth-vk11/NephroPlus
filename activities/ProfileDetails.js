@@ -9,9 +9,9 @@
    TextInput,
    TouchableOpacity
  } from 'react-native';
- const ProfileDetails=()=>{
+ const ProfileDetails=({navigation})=>{
    return(
-     <>
+    <View style={{backgroundColor:'white', width:Dimensions.get('window').width,justifyContent:'center',alignItems:'center',height:Dimensions.get('window').height}}>
         <Image
           style={styles.tinyLogo}
           source={require('../components/drawable/icon.png')}/>
@@ -30,14 +30,15 @@
                 placeholder="Email"
                 placeholderTextColor='#7C7C7C'
             />
-          </View>   
+          </View> 
+          <TouchableOpacity
+            style={styles.bottom_container}
+            underlayColor='#fff'
+            onPress={()=>{navigation.navigate('SelectAddress')}}>
+            <Text style={styles.label}>NEXT</Text>
+          </TouchableOpacity>  
         </View>
-        <TouchableOpacity
-          style={styles.bottom_container}
-          underlayColor='#fff'>
-          <Text style={styles.label}>NEXT</Text>
-        </TouchableOpacity>
-    </>
+    </View>
    );
  }
  const styles = StyleSheet.create({
@@ -52,10 +53,9 @@
         borderWidth:1,
      },
      bottom_container:{
-      alignSelf: 'flex-end',
-      position: 'absolute',
-      bottom: 0,
       width:Dimensions.get('window').width,
+      marginTop:'auto',
+      height:100
    },
     label:{
       backgroundColor:'#9DC44D',
@@ -63,7 +63,7 @@
       paddingTop:10,
       paddingBottom:10,
       textAlign:'center',
-      color:'#ffffff'
+      color:'#ffffff',
   },
      text:{
         display:'flex',
@@ -82,11 +82,13 @@
       width:Dimensions.get('window').width,
       display:'flex',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+      flex:1,
+      marginTop:'8%'
     },
     tinyLogo: {
         display:'flex',
-        bottom:'25%'
+        marginTop:'25%'
       }
   });
  

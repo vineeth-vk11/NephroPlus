@@ -9,9 +9,9 @@
    TextInput,
    TouchableOpacity
  } from 'react-native';
- const Otp_input=()=>{
+ const Otp_input=({navigation})=>{
    return(
-     <>
+     <View style={{backgroundColor:'white', width:Dimensions.get('window').width,justifyContent:'center',alignItems:'center'}}>
         <Image
           style={styles.tinyLogo}
           source={require('../components/drawable/icon.png')}/>
@@ -39,10 +39,11 @@
         </View>
         <TouchableOpacity
           style={styles.bottom_container}
-          underlayColor='#fff'>
+          underlayColor='#fff'
+          onPress={()=>{navigation.navigate('ProfileDetails')}}>
           <Text style={styles.label}>NEXT</Text>
         </TouchableOpacity>
-    </> 
+    </View> 
    );
  }
  const styles = StyleSheet.create({
@@ -82,13 +83,17 @@
     main:{
       backgroundColor:'white',
       width:Dimensions.get('window').width,
+      height:Dimensions.get('window').height,
       display:'flex',
       justifyContent:'center',
       alignItems:'center'
     },
     tinyLogo: {
         display:'flex',
-        bottom:'25%'
+        marginTop:'auto',
+        marginBottom:'auto',
+        marginLeft:'auto',
+        marginRight:'auto'
       }
   });
  

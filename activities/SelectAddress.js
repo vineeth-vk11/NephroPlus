@@ -9,10 +9,13 @@
    TextInput,
    TouchableOpacity
  } from 'react-native';
- const SelectAddress=()=>{
+ const SelectAddress=({navigation})=>{
    return(
-     <>
-        <Text style={styles.text}>Select Address</Text>
+    <View style={{backgroundColor:'white', 
+                  width:Dimensions.get('window').width,
+                  justifyContent:'center',
+                  alignItems:'center',
+                  height:Dimensions.get('window').height}}>
         <View style={styles.main}>
           <View style={{flexDirection:'column'}}>
             <Text  style={styles.subtext}>Google maps address text. Google maps address text. </Text>
@@ -29,13 +32,15 @@
                 placeholderTextColor="#7C7C7C"
             />
           </View>   
+          <TouchableOpacity
+            style={styles.bottom_container}
+            underlayColor='#fff'
+            onPress={()=>{navigation.navigate('EligibilityCheck')}}>
+            <Text style={styles.label}>NEXT</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          style={styles.bottom_container}
-          underlayColor='#fff'>
-          <Text style={styles.label}>NEXT</Text>
-        </TouchableOpacity>
-    </>
+        
+    </View>
    );
  }
  const styles = StyleSheet.create({
@@ -50,10 +55,9 @@
         borderBottomWidth:1,
      },
      bottom_container:{
-      alignSelf: 'flex-end',
-      position: 'absolute',
-      bottom: 0,
       width:Dimensions.get('window').width,
+      marginTop:'auto',
+      height:100
    },
     label:{
       backgroundColor:'#9DC44D',
@@ -66,8 +70,6 @@
      text:{
         display:'flex',
         fontSize:24,
-        position: 'absolute',
-        top: 15,
      },
      subtext:{
         width:Dimensions.get('window').width-100,
@@ -82,7 +84,8 @@
       width:Dimensions.get('window').width,
       display:'flex',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+      marginTop:'auto',
     },
     tinyLogo: {
         display:'flex',

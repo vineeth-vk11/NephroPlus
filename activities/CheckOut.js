@@ -16,7 +16,6 @@
 const CheckOut=()=>{
    return(
      <>
-        <Text style={styles.text}>Slots</Text>
         <View style={{display:'flex',width:'100%',height:'100%',paddingLeft:'4%'}}>
             <View style={{height:75,borderColor:'#9DC44D',borderWidth:1,borderRadius:10,marginTop:'5%',width:370,padding:10}}>
                 <View style={{flexDirection:'row'}}>

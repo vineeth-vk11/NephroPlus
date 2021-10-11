@@ -111,7 +111,6 @@ const Completed = () => (
 export default function Bookings() {
 
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           tabBarLabelStyle: {width:'100%',fontWeight:'bold'},
@@ -122,7 +121,6 @@ export default function Bookings() {
         <Tab.Screen name="OnGoing" component={Ongoing} />
         <Tab.Screen name="Completed" component={Completed} />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
 const styles = StyleSheet.create({

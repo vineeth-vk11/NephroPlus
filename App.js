@@ -12,13 +12,12 @@ import {
 } from 'react-native';
 import Splash from './activities/Splash'
 import MainActivity from './activities/MainActvity';
-
+import { NavigationContainer } from '@react-navigation/native';
+const login=false;
 const App = () => {
 
   return (
-    <View>
-        <Splash/>
-    </View>
+    login?<MainActivity/>:<Splash/>
   );
 };
 

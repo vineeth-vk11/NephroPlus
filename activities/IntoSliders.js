@@ -25,6 +25,7 @@ export default class IntoSlider extends React.Component {
       imageContainerStyles={{display:'flex',paddingBottom:10,width:'100%'}} 
       containerStyles={{display:'flex',marginLeft:'auto',marginRight:'auto',width:500}}
       titleStyles={{display:'flex',marginLeft:'auto',marginRight:'auto',width:300,fontSize:15,textAlign:'center',color:'black'}}
+      onDone={()=>this.props.navigation.push('MobileInput')}
       />
   }
 }

@@ -13,10 +13,9 @@
 
  const result=true;
  
- const EligibilityResult=()=>{
+ const EligibilityResult=({navigation})=>{
    return(
-     <View>
-        <Text style={styles.text}>Eligibility Result</Text>
+    <View style={{backgroundColor:'white', width:Dimensions.get('window').width,justifyContent:'center',alignItems:'center',height:Dimensions.get('window').height}}>
         <View style={styles.main}>
             <Image
             style={styles.tinyLogo}
@@ -26,7 +25,8 @@
         </View>
         <TouchableOpacity
           style={styles.bottom_container}
-          underlayColor='#fff'>
+          underlayColor='#fff'
+          onPress={()=>{navigation.navigate('MainActivity')}}>
           <Text style={styles.label}>{result?"NEXT":"TAKE ELIGIBILITY CHECK AGAIN"}</Text>
         </TouchableOpacity>
     </View>
@@ -48,6 +48,7 @@
       position: 'absolute',
       bottom: 0,
       width:Dimensions.get('window').width,
+      height:100
    },
     label:{
       backgroundColor:'#9DC44D',
@@ -77,11 +78,12 @@
       width:Dimensions.get('window').width,
       display:'flex',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+      flex:1
     },
     tinyLogo: {
-        display:'flex',
-        bottom:'25%'
+      display:'flex',
+      bottom:'30%'
       }
   });
  

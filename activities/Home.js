@@ -5,7 +5,8 @@
    Text,
    View,
    FlatList,
-   SafeAreaView
+   SafeAreaView,
+   TouchableOpacity
     } from 'react-native';
  import RNBounceable from "react-native-bouncy-checkbox";
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
@@ -35,31 +36,38 @@ const DATA = [
    },
  ];
 
- const renderItem = ({ item }) => (
-   <View style={{height:75,borderColor:'#9DC44D',borderWidth:1,borderRadius:10,marginTop:'2%',width:330,padding:10}}>
-     <View style={{flexDirection:'row'}}>
-        <Text style={{fontSize:14,fontWeight:"bold"}}>{item.title}</Text>
-        <Text style={{fontSize:14,fontWeight:"bold",marginLeft:'auto'}}>{'\u20B9'}{item.price}</Text>
-     </View>
-     <Text style={{fontSize:10,color:'#828282'}}>{item.time}</Text>
-     <Text style={{fontSize:10,color:'#828282'}}>{item.desc}</Text>
-   </View>
- );
 
- 
- const HomePage=()=>{
-   return(
-     <View style={styles.main}>
-        <Text style={styles.text}>Services</Text>
-            <SafeAreaView  style={styles.list}>
-            <FlatList
-               data={DATA}
-               renderItem={renderItem}
-               keyExtractor={item => item.id}
-               />
-            </SafeAreaView >
-    </View>
-   );
+
+ class HomePage extends React.Component {
+  constructor(props){
+    super(props);
+    this.renderItem = this.renderItem.bind(this);
+}
+  renderItem = ({ item }) => (
+    <TouchableOpacity style={{height:75,borderColor:'#9DC44D',borderWidth:1,borderRadius:10,marginTop:'2%',width:380,padding:10}}
+     onPress={() => console.log(this.props)}>
+      <View style={{flexDirection:'row'}}>
+         <Text style={{fontSize:14,fontWeight:"bold"}}>{item.title}</Text>
+         <Text style={{fontSize:14,fontWeight:"bold",marginLeft:'auto'}}>{'\u20B9'}{item.price}</Text>
+      </View>
+      <Text style={{fontSize:10,color:'#828282'}}>{item.time}</Text>
+      <Text style={{fontSize:10,color:'#828282'}}>{item.desc}</Text>
+    </TouchableOpacity>
+  );
+  render() {
+    return(
+      <View style={styles.main}>
+         <Text style={styles.text}>Services</Text>
+             <SafeAreaView  style={styles.list}>
+             <FlatList
+                data={DATA}
+                renderItem={this.renderItem}
+                keyExtractor={item => item.id}/>
+             </SafeAreaView >
+     </View>
+    );
+  }
+
  }
  const styles = StyleSheet.create({
     main:{
@@ -71,7 +79,7 @@ const DATA = [
       flex: 1,
       justifyContent: "center",
       backgroundColor: "#ffffff",
-      top:50,
+      top:10,
       width:'100%',
       alignItems:'center'
     },

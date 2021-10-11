@@ -13,7 +13,7 @@
 import {RadioGroup, RadioButton} from 'react-native-flexi-radio-button'
 import DropDownPicker from 'react-native-dropdown-picker';
  
- const EligibilityCheck=()=>{
+ const EligibilityCheck=({navigation})=>{
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
@@ -21,7 +21,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
     {label: 'Banana', value: 'banana'}
   ]);
    return(
-     <>
+     <View style={{ backgroundColor:'white',height:'100%'}}>
         <Text style={styles.text}>Eligibility Check</Text>
         <View style={styles.main}>
             <View style={{flexDirection:'column',marginLeft:'5%'}}>
@@ -113,7 +113,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
                 setItems={setItems}
               />
             </View>
-            <View style={{flexDirection:'column',marginLeft:'5%'}}>
+            <View style={{flexDirection:'column',marginLeft:'5%', backgroundColor:'white'}}>
               <Text  style={styles.subtext}>Does room where dialysis is being planned have an attached bathroom?</Text>
               <RadioGroup
                 size={20}
@@ -132,10 +132,11 @@ import DropDownPicker from 'react-native-dropdown-picker';
         </View>
         <TouchableOpacity
           style={styles.bottom_container}
-          underlayColor='#fff'>
+          underlayColor='#fff'
+          onPress={()=>{navigation.navigate('EligibilityResult')}}>
           <Text style={styles.label}>NEXT</Text>
         </TouchableOpacity>
-    </>
+    </View>
    );
  }
  const styles = StyleSheet.create({
@@ -154,6 +155,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
       position: 'absolute',
       bottom: 0,
       width:Dimensions.get('window').width,
+      backgroundColor:'white'
    },
     label:{
       backgroundColor:'#9DC44D',

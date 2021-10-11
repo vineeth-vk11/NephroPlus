@@ -16,7 +16,6 @@
    return(
      <>
         <View style={{display:'flex',width:'100%',height:'100%',paddingLeft:16,paddingRight:16}}>
-            <Text style={styles.text}>Reports</Text>
             <Text style={{fontWeight:'bold',marginTop:40,lineHeight:24}}>Upload Reports</Text>
             <Text style={{fontWeight:'bold',marginBottom:5,color:'#828282',fontSize:10}}>Report Should have been taken in last 30days</Text>
             <View style={{marginTop:10}}>

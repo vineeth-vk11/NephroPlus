@@ -7,8 +7,8 @@ import OrderPlaced from './OrderPlaced';
 import Bookings from './Bookings';
 import Profile from './Profile';
 
-// const Home = () => <HomePage/>;
-const Home = () => <OrderPlaced/>;
+ const Home = () => <HomePage/>;
+//const Home = () => <OrderPlaced/>;
 
 const BookingsPage = () => <Bookings/>;
 

@@ -12,7 +12,7 @@
  
  const Profile=()=>{
    return(
-    <View style={{paddingLeft:'5%',paddingTop:'25%'}}>
+    <View style={{paddingLeft:'5%',paddingTop:'25%',backgroundColor:'white',height:'100%'}}>
         <View>
           <Text style={{color:'#00000080'}}>Name</Text>
           <Text style={{color:'#00000080'}}>Email</Text>

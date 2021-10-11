@@ -41,7 +41,6 @@ const images= [
    return(
      <>
         <View style={{display:'flex',width:'100%',height:'100%',paddingLeft:16,paddingRight:16}}>
-            <Text style={styles.text}>Services</Text>
             <Text style={{fontWeight:'bold',marginTop:40,marginBottom:5,lineHeight:24}}>Haemodialysis at Home</Text>
             <View style={{marginBottom:30}}>
               <SliderBox

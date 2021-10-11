@@ -15,9 +15,9 @@
    Button,
    TouchableOpacity
  } from 'react-native';
- const Splash=()=>{
+ const Splash=({navigation })=>{
    return(
-     <>
+    <View style={{backgroundColor:'white', width:Dimensions.get('window').width,justifyContent:'center',alignItems:'center',height:Dimensions.get('window').height}}>
       <Image
           style={styles.tinyLogo}
           source={require('../components/drawable/icon.png')}
@@ -30,13 +30,14 @@
         keyboardType="numeric"
         placeholder="mobile number"
         placeholderTextColor="#7C7C7C"/>   
-      </View>
-    <TouchableOpacity
+        <TouchableOpacity
           style={styles.bottom_container}
-          underlayColor='#fff'>
+          underlayColor='#fff'
+          onPress={()=>{navigation.navigate('Otp_input')}}>
           <Text style={styles.label}>NEXT</Text>
-    </TouchableOpacity>
-    </>
+      </TouchableOpacity>
+    </View>
+  </View>
    );
  }
  const styles = StyleSheet.create({
@@ -53,6 +54,7 @@
       position: 'absolute',
       bottom: 0,
       width:Dimensions.get('window').width,
+      height:100
    },
     label:{
       backgroundColor:'#9DC44D',
@@ -74,7 +76,8 @@
       width:Dimensions.get('window').width,
       display:'flex',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+      flex:1
     },
     tinyLogo: {
         display:'flex',
